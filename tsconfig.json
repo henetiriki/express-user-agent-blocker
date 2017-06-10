@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "declaration": true,
+    "noImplicitAny": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "removeComments": false,
+    "noImplicitUseStrict": true,
+    "types": [
+      "@types/express"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
