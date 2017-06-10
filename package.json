@@ -1,7 +1,7 @@
 {
   "name": "express-user-agent-blocker",
   "description": "Express middleware for blocking access based on User Agent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Louw Swart",
     "email": "louw@ouq77.kiwi"
