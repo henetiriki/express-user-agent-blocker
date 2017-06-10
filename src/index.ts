@@ -8,13 +8,15 @@ import {NextFunction, Request, RequestHandler, Response} from 'express'
  * @returns {(req:Request, res:Response, next:NextFunction)=>RequestHandler}
  */
 const euaBlocker = (userAgentToBlock: string[]): RequestHandler => {
-  const blockRegex = new RegExp(`^.*(${userAgentToBlock.join('|')}).*$`)
+  const blockRegex = new RegExp(`^.*(${userAgentToBlock.join('|').toLowerCase()}).*$`)
   return (req: Request, res: Response, next: NextFunction) => {
     const userAgent = (req.headers['user-agent'] || '').trim()
 
     if (blockRegex.exec(userAgent.toLowerCase())) {
       console.log(`Disallowing access to request from UA '${userAgent}'`)
-      res.status(200).json({message: 'Nothing to see here - please move along...'})
+      res.status(200).json({message: 'Nothing to see here - move along please...'})
+
+      return;
     }
 
     next()
