@@ -12,7 +12,7 @@ const euaBlocker = (userAgentToBlock: string[]): RequestHandler => {
   return (req: Request, res: Response, next: NextFunction) => {
     const userAgent = (req.headers['user-agent'] || '').trim()
 
-    if (blockRegex.exec(userAgent.toLowerCase())) {
+    if (blockRegex.test(userAgent.toLowerCase())) {
       console.log(`Disallowing access to request from UA '${userAgent}'`)
       res.status(200).json({message: 'Nothing to see here - move along please...'})
 

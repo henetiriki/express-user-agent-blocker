@@ -1,34 +1,37 @@
 {
-  "name": "express-user-agent-blocker",
-  "description": "Express middleware for blocking access based on User Agent",
-  "version": "1.0.3",
   "author": {
-    "name": "Louw Swart",
-    "email": "louw@ouq77.kiwi"
+    "email": "louw@ouq77.kiwi",
+    "name": "Louw Swart"
   },
+  "bugs": {
+    "url": "https://github.com/ouq77/express-user-agent-blocker/issues"
+  },
+  "dependencies": {},
+  "description": "Express middleware for blocking access based on User Agent",
+  "devDependencies": {
+    "@types/express": "4.0.35",
+    "tslint": "5.4.3",
+    "typescript": "2.3.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "blocker",
+    "express",
+    "user-agent"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "name": "express-user-agent-blocker",
   "repository": {
     "type": "git",
     "url": "git@github.com:ouq77/express-user-agent-blocker.git"
   },
-  "keywords": [
-    "user-agent",
-    "express",
-    "blocker"
-  ],
-  "license": "MIT",
-  "main": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsc",
     "lint": "tslint src/**/*",
     "prepublish": "npm run lint && npm run build"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/express": "4.0.35",
-    "tslint": "5.4.3",
-    "typescript": "2.3.4"
-  }
+  "version": "1.0.3"
 }
