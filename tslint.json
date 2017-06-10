@@ -1,7 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
-    "no-console": true,
+    "no-console": false,
     "semicolon": [
       true,
       "never"
