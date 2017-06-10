@@ -20,4 +20,4 @@ const euaBlocker = (userAgentToBlock: string[]): RequestHandler => {
   }
 }
 
-export default euaBlocker
+export = euaBlocker
