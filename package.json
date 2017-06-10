@@ -1,8 +1,16 @@
 {
   "name": "express-user-agent-blocker",
-  "version": "0.0.1",
   "description": "Express middleware for blocking access based on User Agent",
-  "author": "Louw Swart <louw@ouq77.kiwi>",
+  "version": "0.0.1",
+  "author": {
+    "name": "Louw Swart",
+    "email": "louw@ouq77.kiwi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ouq77/express-user-agent-blocker.git"
+  },
+  "keywords": ["user-agent", "express", "blocker"],
   "license": "MIT",
   "main": "./dist/index.js",
   "scripts": {
