@@ -16,7 +16,7 @@ const euaBlocker = (userAgentToBlock: string[]): RequestHandler => {
       console.log(`Disallowing access to request from UA '${userAgent}'`)
       res.status(200).json({message: 'Nothing to see here - move along please...'})
 
-      return;
+      return
     }
 
     next()
