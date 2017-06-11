@@ -18,7 +18,7 @@
   },
   "engines": {
     "node": ">=6",
-    "npm": ">=4"
+    "npm": ">=3"
   },
   "keywords": [
     "blocker",

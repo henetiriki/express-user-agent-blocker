@@ -1,4 +1,4 @@
-# Express User-agent Blocker
+# Express User-agent Blocker [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker)
 
 A lightweight user-agent blocker for Express.
 
