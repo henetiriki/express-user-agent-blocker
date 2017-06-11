@@ -39,8 +39,8 @@
     "prepare": "npm run lint && npm run build",
     "pretest": "npm run prepare",
     "test": "lab -c -S -v ./dist/test",
-    "test:coverage:html": "npm run prepare && lab -c -S -v --coverage-exclude dist/test -r html -o ./coverage/coverage.html ./dist/test",
-    "test:coverage:lcov": "npm run prepare && lab -c -S -v --coverage-exclude dist/test -r lcov -o ./coverage/lcov.info ./dist/test"
+    "test:coverage:html": "lab -c -S -v --coverage-exclude dist/test -r html -o ./coverage/coverage.html ./dist/test",
+    "test:coverage:lcov": "lab -c -S -v --coverage-exclude dist/test -r lcov -o ./coverage/lcov.info ./dist/test"
   },
   "version": "1.0.4"
 }
