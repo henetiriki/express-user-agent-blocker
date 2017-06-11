@@ -41,6 +41,19 @@ Any unwanted UAs visiting your application will be sent a `JSON` response:
 }
 ```
 
+## Tests
+
+Run tests with:
+```shell
+npm test
+```
+
+Run coverage report with:
+
+```shell
+npm run test:coverage
+```
+
 ## License
 
 [MIT](LICENSE)
