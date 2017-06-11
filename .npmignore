@@ -1,0 +1,11 @@
+src
+test
+coverage
+npm-debug.log
+ts*.json
+.gitignore
+.npmignore
+.idea
+*.iml
+*.tgz
+.travis.yml

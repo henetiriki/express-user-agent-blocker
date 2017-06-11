@@ -1,5 +1,6 @@
 ### Project
 dist/
+coverage/
 
 ### Node
 # Logs
@@ -8,6 +9,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+express-user-agent-blocker-*.tgz
 
 # Runtime data
 pids

@@ -1,23 +1,30 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": false,
-    "declaration": true,
-    "noImplicitAny": true,
-    "rootDir": "./src",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": true,
     "outDir": "./dist",
-    "allowSyntheticDefaultImports": true,
     "pretty": true,
     "removeComments": false,
-    "noImplicitUseStrict": true,
+    "rootDir": "./src",
+    "sourceMap": false,
+    "target": "es6",
     "types": [
       "@types/express"
     ]
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "test"
   ]
 }
