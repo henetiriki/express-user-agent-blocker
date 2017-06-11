@@ -8,6 +8,9 @@ install:
 
 script:
   - npm test
+  - npm test:coverage:lcov
 
 # Allow Travis tests to run in containers.
 sudo: false
+
+after_script: "cat ./coverage/lcov.info | coveralls"

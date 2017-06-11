@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/express": "4.0.35",
     "code": "4.1.0",
+    "coveralls": "2.13.1",
     "lab": "13.1.0",
     "mock-req": "0.2.0",
     "tslint": "5.4.3",
@@ -38,7 +39,8 @@
     "prepare": "npm run lint && npm run build",
     "pretest": "npm run prepare",
     "test": "lab -c -S -v ./dist/test",
-    "test:coverage": "npm run prepare && lab -c -S -v --coverage-exclude dist/test -r html -o ./coverage/coverage.html ./dist/test"
+    "test:coverage:html": "npm run prepare && lab -c -S -v --coverage-exclude dist/test -r html -o ./coverage/coverage.html ./dist/test",
+    "test:coverage:lcov": "npm run prepare && lab -c -S -v --coverage-exclude dist/test -r lcov -o ./coverage/lcov.info ./dist/test"
   },
   "version": "1.0.4"
 }
