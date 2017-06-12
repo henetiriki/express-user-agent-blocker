@@ -1,5 +1,7 @@
 import {NextFunction, Request, RequestHandler, Response} from 'express'
 
+import {buildUaBlockRegex, isBlockUa, readUa} from './module'
+
 /**
  * Express middleware function to restrict access based on User Agent
  * @param {Array<String>} userAgentToBlock
@@ -8,15 +10,17 @@ import {NextFunction, Request, RequestHandler, Response} from 'express'
  * @returns {(req:Request, res:Response, next:NextFunction)=>RequestHandler}
  */
 const euaBlocker = (userAgentToBlock: string[]): RequestHandler => {
-  const blockRegex = new RegExp(`^.*(${userAgentToBlock.join('|').toLowerCase()}).*$`)
+  const blockRegex = buildUaBlockRegex(userAgentToBlock)
   return (req: Request, res: Response, next: NextFunction) => {
-    const userAgent = (req.headers['user-agent'] || '').trim()
+    if (blockRegex) {
+      const userAgent = readUa(req)
 
-    if (blockRegex.test(userAgent.toLowerCase())) {
-      console.log(`Disallowing access to request from UA '${userAgent}'`)
-      res.status(200).json({message: 'Nothing to see here - move along please...'})
+      if (isBlockUa(blockRegex, userAgent)) {
+        console.log(`Disallowing access to request from UA '${userAgent}'`)
+        res.status(200).json({message: 'Nothing to see here - move along please...'})
 
-      return
+        return
+      }
     }
 
     next()
