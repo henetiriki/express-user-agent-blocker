@@ -13,7 +13,7 @@ const expect = chai.expect
 
 chai.use(sinonChai)
 
-import * as userAgentBlocker from '../index'
+import * as userAgentBlocker from '../src/index'
 
 describe('index', () => {
   let req: mockReq

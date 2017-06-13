@@ -8,7 +8,7 @@ const describe = lab.describe
 const it = lab.it
 const before = lab.before
 
-import {readUa} from '../../module'
+import {readUa} from '../../src/module'
 
 describe('readUa', () => {
   let req: MockReq

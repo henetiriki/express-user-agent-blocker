@@ -1,4 +1,4 @@
-# Express User-agent Blocker 
+# Express User-agent Blocker 🤖
 
 [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker) [![Coverage Status](https://coveralls.io/repos/github/ouq77/express-user-agent-blocker/badge.svg?branch=master)](https://coveralls.io/github/ouq77/express-user-agent-blocker?branch=master)
 
@@ -50,11 +50,15 @@ Run tests with:
 npm test
 ```
 
-Run coverage report with:
+## Changelog
 
-```shell
-npm run test:coverage
-```
+### v1.1.2
+
+- Moved test files out of src folder
+
+### pre v1.1.2
+
+- Changelog didn't exist! 🙈
 
 ## License
 

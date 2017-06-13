@@ -6,7 +6,7 @@ const describe = lab.describe
 const it = lab.it
 const before = lab.before
 
-import {buildUaBlockRegex} from '../../module'
+import {buildUaBlockRegex} from '../../src/module'
 
 describe('buildUaBlockRegex', () => {
   describe('when passing in a valid Array', () => {

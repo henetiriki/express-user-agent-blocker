@@ -6,7 +6,7 @@ const describe = lab.describe
 const it = lab.it
 const before = lab.before
 
-import {isBlockUa} from '../../module'
+import {isBlockUa} from '../../src/module'
 
 describe('isBlockUa', () => {
   describe('when the regex is testing for a|b|c', () => {

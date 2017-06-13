@@ -12,10 +12,10 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noImplicitUseStrict": true,
-    "outDir": "./dist",
+    "outDir": "./compiled",
     "pretty": true,
     "removeComments": false,
-    "rootDir": "./src",
+    "rootDir": "./",
     "sourceMap": false,
     "target": "es6",
     "types": [
@@ -24,7 +24,6 @@
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "test"
+    "dist"
   ]
 }

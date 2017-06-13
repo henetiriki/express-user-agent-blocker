@@ -15,6 +15,9 @@
     "coveralls": "2.13.1",
     "lab": "13.1.0",
     "mock-req": "0.2.0",
+    "ncp": "2.0.0",
+    "npm-run-all": "4.0.2",
+    "rimraf": "2.6.1",
     "sinon": "2.3.4",
     "sinon-chai": "2.11.0",
     "sinon-express-mock": "1.3.1",
@@ -38,13 +41,22 @@
     "url": "git@github.com:ouq77/express-user-agent-blocker.git"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npm-run-all build:*",
+    "build:clean": "npm run clean",
+    "build:lint": "npm run lint",
+    "build:compile": "tsc -p tsconfig.json",
+    "build:dist": "ncp compiled/src dist",
+    "clean": "npm-run-all clean:*",
+    "clean:compiled": "rimraf compiled/*",
+    "clean:coverage": "rimraf coverage/*",
+    "clean:dist": "rimraf dist/*",
     "lint": "tslint src/**/*",
-    "prepare": "npm run lint && npm run build",
+    "prepare": "npm run build",
     "pretest": "npm run prepare",
-    "test": "lab -c -S -v ./dist/test",
-    "test:coverage:html": "lab -c -S -v --coverage-exclude dist/test -r html -o ./coverage/coverage.html ./dist/test",
-    "test:coverage:lcov": "lab -c -S -v --coverage-exclude dist/test -r lcov -o ./coverage/lcov.info ./dist/test"
+    "test": "npm-run-all test:*",
+    "test:run": "lab -c -S -v ./compiled/test",
+    "test:coverage-html": "lab -c -S -v --coverage-exclude compiled/test -r html -o ./coverage/coverage.html ./compiled/test",
+    "test:coverage-lcov": "lab -c -S -v --coverage-exclude compiled/test -r lcov -o ./coverage/lcov.info ./compiled/test"
   },
   "version": "1.1.1"
 }
