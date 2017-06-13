@@ -1,11 +1,24 @@
+# folders
 src
 test
 coverage
+compiled
+
+# logs
 npm-debug.log
+
+# config files
+rollup.config.js
 ts*.json
+.travis.yml
+
+# ignore files
 .gitignore
 .npmignore
+
+# ide files
 .idea
 *.iml
+
+# pack files
 *.tgz
-.travis.yml

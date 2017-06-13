@@ -13,7 +13,7 @@ const expect = chai.expect
 
 chai.use(sinonChai)
 
-import * as userAgentBlocker from '../src/index'
+import * as blocker from '../src/index'
 
 describe('index', () => {
   let req: mockReq
@@ -34,7 +34,7 @@ describe('index', () => {
     })
 
     it('expect the response to contain message "Nothing to see here - move along please..."', (done) => {
-      userAgentBlocker(['Baiduspider'])(req, res, next)
+      blocker(['Baiduspider'])(req, res, next)
       expect(res.json).to.be.calledWith({message: 'Nothing to see here - move along please...'})
       expect(next.notCalled)
       done()
@@ -55,7 +55,7 @@ describe('index', () => {
     })
 
     it('expect the next function to be called', (done) => {
-      userAgentBlocker(['Baiduspider'])(req, res, next)
+      blocker(['Baiduspider'])(req, res, next)
       expect(res.json).to.not.be.calledWith({message: 'Nothing to see here - move along please...'})
       expect(next.called)
       done()
@@ -76,7 +76,7 @@ describe('index', () => {
     })
 
     it('expect the next function to be called', (done) => {
-      userAgentBlocker([])(req, res, next)
+      blocker([])(req, res, next)
       expect(res.json).to.not.be.calledWith({message: 'Nothing to see here - move along please...'})
       expect(next.called)
       done()

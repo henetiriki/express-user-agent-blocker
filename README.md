@@ -55,10 +55,16 @@ npm test
 ### v1.1.2
 
 - Moved test files out of src folder
+- Using rollup to compile module files into single index.js
 
 ### pre v1.1.2
 
 - Changelog didn't exist! 🙈
+
+## Todo
+
+- Enable optional message/template to send to blocked UAs
+- Enable passing in of alternative logger (currently defaults to `process.stdout`)
 
 ## License
 
