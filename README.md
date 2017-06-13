@@ -45,6 +45,8 @@ Any unwanted UAs visiting your application will be sent a `JSON` response:
 
 ## Tests
 
+Tested in node >= 6
+
 Run tests with:
 ```shell
 npm test
