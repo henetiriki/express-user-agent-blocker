@@ -54,6 +54,10 @@ npm test
 
 ## Changelog
 
+### v1.2.0
+
+- Added option to send alternative message to blocked UAs
+
 ### v1.1.2
 
 - Moved test files out of src folder
@@ -65,7 +69,6 @@ npm test
 
 ## Todo
 
-- Enable optional message/template to send to blocked UAs
 - Enable passing in of alternative logger (currently defaults to `process.stdout`)
 
 ## License
