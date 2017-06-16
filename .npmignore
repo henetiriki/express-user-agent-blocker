@@ -8,9 +8,12 @@ compiled
 npm-debug.log
 
 # config files
+.bithoundrc
+.editorconfig
+.jshintrc
+.travis.yml
 rollup.config.js
 ts*.json
-.travis.yml
 
 # ignore files
 .gitignore
