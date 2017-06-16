@@ -49,11 +49,11 @@
     "url": "git@github.com:ouq77/express-user-agent-blocker.git"
   },
   "scripts": {
-    "build": "npm-run-all test:* build:*",
+    "build": "npm-run-all build:*",
     "build:clean": "npm run clean",
     "build:lint": "npm run lint",
     "build:compile": "tsc -p tsconfig.json",
-    "build:copy": "cpy 'compiled/src/index.d.ts' dist",
+    "build:copy": "cpy 'compiled/src/index.d.ts' dist && cpy 'compiled/src/interface/blockerOptions.d.ts' dist/interface",
     "build:rollup": "rollup -c rollup.config.js --no-conflict",
     "clean": "npm-run-all clean:*",
     "clean:compiled": "rimraf compiled/*",
