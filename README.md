@@ -33,9 +33,19 @@ app.use(userAgentBlocker(['Baiduspider', 'SomeHorridUA']))
 // ...
 ```
 
+### Specifying a custom message
+               
+```js
+// html response
+app.use(userAgentBlocker(['Baiduspider'], {html: '<h1>Let me make a bologna sandwich...</h1>'}))
+
+// plain text response
+app.use(userAgentBlocker(['Baiduspider'], {text: 'Words hold no weight'}))
+```
+
 ## Result
 
-Any unwanted UAs visiting your application will be sent a `JSON` response:
+If no custom message has been set (see above), any unwanted UAs visiting your application will be sent a default `JSON` response:
 
 ```json
 {
