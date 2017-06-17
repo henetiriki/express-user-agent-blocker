@@ -57,7 +57,23 @@ If no custom message has been set (see above), any unwanted UAs visiting your ap
 }
 ```
 
-### Specifying a custom logger
+## Enable default debug logging
+
+Pass `euab:*` in as part `DEBUG` when starting the express server, e.g.
+```bash
+// log everything
+DEBUG=euab:* node server.js
+
+// log only denied requests
+DEBUG=euab:index node server.js
+
+// log the block regex only during startup 
+DEBUG=euab:buildUaBlockRegex node server.js
+
+// log only the message sent to the blocked UA
+DEBUG=euab:respondToBlockedUa node server.js
+```
+## Specifying a custom logger
 
 Pass in a logger object with a `log` function to call
 ```js
@@ -82,6 +98,14 @@ npm test
 
 ## Changelog
 
+### v1.3.1
+
+- Additional README information
+
+### v1.3.0
+
+- Enable passing in of alternative logger (currently defaults to `process.stdout`)
+
 ### v1.2.0
 
 - Added option to send alternative message to blocked UAs
@@ -94,10 +118,6 @@ npm test
 ### pre v1.1.2
 
 - Changelog didn't exist! 🙈
-
-## Todo
-
-- Enable passing in of alternative logger (currently defaults to `process.stdout`)
 
 ## License
 
