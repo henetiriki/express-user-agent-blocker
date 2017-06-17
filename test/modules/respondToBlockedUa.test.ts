@@ -4,16 +4,15 @@ import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import {mockRes} from 'sinon-express-mock'
 
-export const lab = Lab.script()
+import {respondToBlockedUa} from '../../src/modules/respondToBlockedUa'
 
+export const lab = Lab.script()
 const describe = lab.describe
 const it = lab.it
 const before = lab.before
 const expect = chai.expect
 
 chai.use(sinonChai)
-
-import {respondToBlockedUa} from '../../src/module/respondToBlockedUa'
 
 describe('index', () => {
   let res: mockRes

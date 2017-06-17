@@ -6,9 +6,6 @@ node_js:
 install:
   - npm install
 
-script:
-  - npm test
-
 # Allow Travis tests to run in containers.
 sudo: false
 

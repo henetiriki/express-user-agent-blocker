@@ -1,12 +1,12 @@
 import {expect} from 'code'
 import * as Lab from 'lab'
-export const lab = Lab.script()
 
+import {isBlockUa} from '../../src/modules'
+
+export const lab = Lab.script()
 const describe = lab.describe
 const it = lab.it
 const before = lab.before
-
-import {isBlockUa} from '../../src/module'
 
 describe('isBlockUa', () => {
   describe('when the regex is testing for a|b|c', () => {
