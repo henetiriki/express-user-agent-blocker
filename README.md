@@ -37,10 +37,14 @@ app.use(userAgentBlocker(['Baiduspider', 'SomeHorridUA']))
                
 ```js
 // html response
-app.use(userAgentBlocker(['Baiduspider'], {html: '<h1>Let me make a bologna sandwich...</h1>'}))
+app.use(userAgentBlocker(['Baiduspider'], {
+  html: '<h1>Let me make a bologna sandwich...</h1>'
+}))
 
 // plain text response
-app.use(userAgentBlocker(['Baiduspider'], {text: 'Words hold no weight'}))
+app.use(userAgentBlocker(['Baiduspider'], {
+  text: 'Words hold no weight'
+}))
 ```
 
 ## Result
@@ -51,6 +55,20 @@ If no custom message has been set (see above), any unwanted UAs visiting your ap
 {
   "message": "Nothing to see here - move along please..."
 }
+```
+
+### Specifying a custom logger
+
+Pass in a logger object with a `log` function to call
+```js
+// console log
+app.use(userAgentBlocker(['Baiduspider'], {
+  logger: {
+    log: (message) => {
+      console.log(message)
+    }
+  }
+}))
 ```
 
 ## Tests

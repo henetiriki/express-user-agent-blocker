@@ -17,17 +17,15 @@ const blocker = (userAgentToBlock: string[], options?: Options): RequestHandler 
   const log: any = getLogger('euab:index', options)
   const blockRegex: RegExp = buildUaBlockRegex(userAgentToBlock)
   return (req: Request, res: Response, next: NextFunction) => {
-    if (!blockRegex) {
-      next()
-    }
-
     if (blockRegex) {
       const userAgent = readUa(req)
       if (isBlockUa(blockRegex, userAgent)) {
         log(`Disallowing access to request from UA '${userAgent}'`)
         respondToBlockedUa(res, options)
+        return
       }
     }
+    next()
   }
 }
 
