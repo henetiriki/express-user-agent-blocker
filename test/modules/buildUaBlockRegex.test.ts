@@ -1,12 +1,12 @@
 import {expect} from 'code'
 import * as Lab from 'lab'
-export const lab = Lab.script()
 
+import {buildUaBlockRegex} from '../../src/modules'
+
+export const lab = Lab.script()
 const describe = lab.describe
 const it = lab.it
 const before = lab.before
-
-import {buildUaBlockRegex} from '../../src/module'
 
 describe('buildUaBlockRegex', () => {
   describe('when passing in a valid Array', () => {

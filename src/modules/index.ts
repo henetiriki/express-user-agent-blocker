@@ -1,4 +1,5 @@
 export {buildUaBlockRegex} from './buildUaBlockRegex'
+export {getLogger} from './getLogger'
 export {isBlockUa} from './isBlockUa'
 export {readUa} from './readUa'
 export {respondToBlockedUa} from './respondToBlockedUa'
