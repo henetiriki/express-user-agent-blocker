@@ -61,16 +61,16 @@ If no custom message has been set (see above), any unwanted UAs visiting your ap
 
 Pass `euab:*` in as part `DEBUG` when starting the express server, e.g.
 ```bash
-// log everything
+# log everything
 DEBUG=euab:* node server.js
 
-// log only denied requests
+# log only denied requests
 DEBUG=euab:index node server.js
 
-// log the block regex only during startup 
+# log the block regex only during startup 
 DEBUG=euab:buildUaBlockRegex node server.js
 
-// log only the message sent to the blocked UA
+# log only the message sent to the blocked UA
 DEBUG=euab:respondToBlockedUa node server.js
 ```
 ## Specifying a custom logger
