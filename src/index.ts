@@ -15,7 +15,7 @@ import {buildUaBlockRegex, getLogger, isBlockUa, readUa, respondToBlockedUa} fro
  */
 const blocker = (userAgentToBlock: string[], options?: Options): RequestHandler => {
   const log: any = getLogger('euab:index', options)
-  const blockRegex: RegExp = buildUaBlockRegex(userAgentToBlock)
+  const blockRegex: RegExp = buildUaBlockRegex(userAgentToBlock, options)
   return (req: Request, res: Response, next: NextFunction) => {
     if (blockRegex) {
       const userAgent = readUa(req)
