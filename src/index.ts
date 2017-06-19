@@ -5,6 +5,7 @@ import {buildUaBlockRegex, getLogger, isBlockUa, readUa, respondToBlockedUa} fro
 
 /**
  * Express middleware function to restrict access based on User Agent
+ * @function
  * @param {string[]} userAgentToBlock
  *          one or more (partial) User Agent strings to block
  *          e.g. ['Baiduspider', 'SomeHorridUA']
