@@ -6,9 +6,7 @@
   "bugs": {
     "url": "https://github.com/ouq77/express-user-agent-blocker/issues"
   },
-  "dependencies": {
-    "debug": "2.6.8"
-  },
+  "dependencies": {},
   "description": "Express middleware for blocking access based on User Agent",
   "devDependencies": {
     "@types/debug": "0.0.29",
@@ -40,6 +38,10 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "name": "express-user-agent-blocker",
+  "peerDependencies": {
+    "express": "4.x",
+    "debug": "2.x"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:ouq77/express-user-agent-blocker.git"

@@ -1,3 +1,6 @@
+/**
+ * @param {string} message the message to log
+ */
 export type LogType = (message: string) => void
 
 /**
@@ -7,7 +10,6 @@ export type LogType = (message: string) => void
 export interface Log {
   /**
    * Custom log function
-   * @param {string} message the message to log
    */
   log: LogType
 }
