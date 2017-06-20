@@ -10,7 +10,7 @@ const defaultMessage = {
 /**
  * Responds to a blocked user agent, either with the default message, or an optional custom message
  * @param {Response} res the response object
- * @param {Options} [options] will respond with a custom {@code html} or {@code text} message, if set
+ * @param {Options} [options] will respond with a custom {@link Options#html} or {@link Options#text} message, if set
  */
 const respondToBlockedUa = (res: Response, options: Options = {html: '', text: ''}): void => {
   const log: any = getLogger('euab:respondToBlockedUa', options)

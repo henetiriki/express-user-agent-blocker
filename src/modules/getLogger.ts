@@ -5,8 +5,8 @@ import {LogType, Options} from '../index.d'
 
 /**
  * Get a logger for a particular namespace, or return a custom log function
- * @param {string} namespace the namespace to log for
- * @param {Options} [options] optional options which may contain custom log function
+ * @param {string} namespace - the namespace to log for
+ * @param {Options} [options] - optional options which may contain custom log function
  * @returns {Log} the log function
  */
 const getLogger = (namespace: string, options: Options = {logger: undefined}): IDebugger|LogType => {
