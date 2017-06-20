@@ -3,7 +3,7 @@ import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 
-import {Log} from '../../src/interfaces'
+import {Log} from '../../src/index.d'
 import {getLogger} from '../../src/modules'
 
 export const lab = Lab.script()

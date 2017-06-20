@@ -1,6 +1,6 @@
 import {Response} from 'express'
 
-import {Options} from '../interfaces'
+import {Options} from '../index.d'
 import {getLogger} from './'
 
 const defaultMessage = {

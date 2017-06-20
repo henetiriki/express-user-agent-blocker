@@ -1,6 +1,6 @@
 import {NextFunction, Request, RequestHandler, Response} from 'express'
 
-import {Options} from './interfaces'
+import {Options} from './index.d'
 import {buildUaBlockRegex, getLogger, isBlockUa, readUa, respondToBlockedUa} from './modules'
 
 /**

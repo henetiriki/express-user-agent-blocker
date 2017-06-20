@@ -1,4 +1,4 @@
-import {Options} from '../interfaces'
+import {Options} from '../index.d'
 import {getLogger} from './'
 
 /**

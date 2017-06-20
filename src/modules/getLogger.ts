@@ -1,7 +1,7 @@
 import {IDebugger} from '@types/debug'
 import debug from 'debug'
 
-import {LogType, Options} from '../interfaces'
+import {LogType, Options} from '../index.d'
 
 /**
  * Get a logger for a particular namespace, or return a custom log function
