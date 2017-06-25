@@ -11,11 +11,12 @@
   "devDependencies": {
     "@types/debug": "0.0.29",
     "@types/express": "4.0.36",
+    "bithound": "1.7.0",
     "chai": "4.0.2",
     "code": "4.1.0",
     "coveralls": "2.13.1",
     "debug": "2.6.8",
-    "lab": "14.0.1",
+    "lab": "14.1.0",
     "mock-req": "0.2.0",
     "ncp": "2.0.0",
     "npm-run-all": "4.0.2",
