@@ -38,16 +38,14 @@ import {buildUaBlockRegex, getLogger, isBlockUa, readUa, respondToBlockedUa} fro
 const blocker = (userAgentToBlock: string[], options?: Options): RequestHandler => {
   const log: any = getLogger('euab:index', options)
   const blockRegex: RegExp = buildUaBlockRegex(userAgentToBlock, options)
-  return (req: Request, res: Response, next: NextFunction) => {
-    if (blockRegex) {
-      const userAgent = readUa(req)
-      if (isBlockUa(blockRegex, userAgent)) {
-        log(`Disallowing access to request from UA '${userAgent}'`)
-        respondToBlockedUa(res, options)
-        return
-      }
+  return (req: Request, res: Response, next: NextFunction): void => {
+    const userAgent: string = readUa(req)
+    if (blockRegex && isBlockUa(blockRegex, userAgent)) {
+      log(`Disallowing access to request from UA '${userAgent}'`)
+      respondToBlockedUa(res, options)
+    } else {
+      next()
     }
-    next()
   }
 }
 

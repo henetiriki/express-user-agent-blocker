@@ -83,7 +83,7 @@ describe('index', () => {
     it('expect the next function to be called', (done) => {
       blocker(['Baiduspider'])(req, res, next)
       expect(res.notCalled)
-      expect(next.called)
+      expect(next.calledonce)
       done()
     })
   })
@@ -104,7 +104,7 @@ describe('index', () => {
     it('expect the next function to be called', (done) => {
       blocker([])(req, res, next)
       expect(res.notCalled)
-      expect(next.called)
+      expect(next.calledonce)
       done()
     })
   })

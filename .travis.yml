@@ -9,4 +9,6 @@ install:
 # Allow Travis tests to run in containers.
 sudo: false
 
-after_script: "cat ./coverage/lcov.info | coveralls"
+after_script:
+  - "cat ./coverage/lcov.info | coveralls"
+  - "bithound check git@github.com:ouq77/express-user-agent-blocker.git"
