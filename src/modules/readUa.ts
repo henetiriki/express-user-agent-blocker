@@ -1,4 +1,4 @@
-import {Request} from '@types/express'
+import {Request} from 'express'
 
 /**
  * Reads the user agent from the request
