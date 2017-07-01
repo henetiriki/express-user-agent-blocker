@@ -41,7 +41,7 @@
   "name": "express-user-agent-blocker",
   "peerDependencies": {
     "express": ">= 4.5.0",
-    "debug": "2.x"
+    "debug": ">= 1.0.2"
   },
   "repository": {
     "type": "git",
