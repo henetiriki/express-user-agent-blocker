@@ -1,6 +1,6 @@
 # Express User-agent Blocker 🤖
 
-[![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker) [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker) [![Coverage Status](https://coveralls.io/repos/github/ouq77/express-user-agent-blocker/badge.svg?branch=master)](https://coveralls.io/github/ouq77/express-user-agent-blocker?branch=master) [![bitHound Code](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/code.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker) [![bitHound Dev Dependencies](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/devDependencies.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker/master/dependencies/npm)
+[![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker) [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker) [![Coverage Status](https://coveralls.io/repos/github/ouq77/express-user-agent-blocker/badge.svg?branch=master)](https://coveralls.io/github/ouq77/express-user-agent-blocker?branch=master) [![bitHound Code](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/code.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker) [![bitHound Dependencies](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/dependencies.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker/master/dependencies/npm)
 
 A lightweight user-agent blocker for Express.
 
@@ -98,9 +98,16 @@ npm test
 
 ## Changelog
 
-### v1.3.1
+### v1.4.0
+
+- Upped version of `express` peer dependency to 4.5.x, which is patched for [No Charset in Content-Type Header](https://nodesecurity.io/advisories/express_no-charset-in-content-type-header) vulnerability
+
+
+### v1.3.x
 
 - Additional README information
+- Added `express` and `debug` as peer dependencies
+- Updated JSDoc
 
 ### v1.3.0
 

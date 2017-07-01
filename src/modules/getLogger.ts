@@ -1,4 +1,4 @@
-import {IDebugger} from '@types/debug'
+import {IDebugger} from 'debug'
 import debug from 'debug'
 
 import {LogType, Options} from '../index.d'
