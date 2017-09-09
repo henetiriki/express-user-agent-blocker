@@ -6,7 +6,7 @@ A lightweight user-agent blocker for Express.
 
 ## Why?
 
-Some bots just don't play by the rules and blatantly disrespect `robots.txt`. For those bots, we say **"Nothing to see here - move along please..."**
+Some bots just don't play by the rules and blatantly disrespect `robots.txt`. To these bots, we say **"Nothing to see here - move along please..."**
 
 ## Installation
 
