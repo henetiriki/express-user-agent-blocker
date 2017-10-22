@@ -89,7 +89,7 @@ app.use(userAgentBlocker(['Baiduspider'], {
 
 ## Tests
 
-Tested in node >= 6
+Tested in node >= 7
 
 Run tests with:
 ```shell
@@ -98,29 +98,33 @@ npm test
 
 ## Changelog
 
+### v1.5.0
+
+- Drops testing support for Node 6, but should continue to work as normal
+
 ### v1.4.0
 
-- Upped version of `express` peer dependency to 4.5.x, which is patched for [No Charset in Content-Type Header](https://nodesecurity.io/advisories/express_no-charset-in-content-type-header) vulnerability
+- Ups version of `express` peer dependency to 4.5.x, which is patched for [No Charset in Content-Type Header](https://nodesecurity.io/advisories/express_no-charset-in-content-type-header) vulnerability
 
 
 ### v1.3.x
 
 - Additional README information
-- Added `express` and `debug` as peer dependencies
-- Updated JSDoc
+- Adds `express` and `debug` as peer dependencies
+- Updates JSDoc
 
 ### v1.3.0
 
-- Enable passing in of alternative logger (currently defaults to `process.stdout`)
+- Enables passing in of alternative logger (currently defaults to `process.stdout`)
 
 ### v1.2.0
 
-- Added option to send alternative message to blocked UAs
+- Adds option to send alternative message to blocked UAs
 
 ### v1.1.2
 
-- Moved test files out of src folder
-- Using rollup to compile module files into single index.js
+- Moves test files out of src folder
+- Uses rollup to compile module files into single index.js
 
 ### pre v1.1.2
 
