@@ -17,16 +17,14 @@ chai.use(sinonChai)
 describe('getLogger', () => {
   describe('when creating a default logger', () => {
     let result: any
-    before((done) => {
+    before(() => {
       result = getLogger('euab:getLogger.test')
       result.log = sinon.spy()
-      done()
     })
 
-    it('the log function should not be called because DEBUG is not set', (done) => {
+    it('the log function should not be called because DEBUG is not set', () => {
       result('will not log because DEBUG is not set')
       expect(result.log.notCalled)
-      done()
     })
   })
 
@@ -38,15 +36,13 @@ describe('getLogger', () => {
       },
     }
     let result: any
-    before((done) => {
+    before(() => {
       result = getLogger('euab:getLogger.test', {logger})
-      done()
     })
 
-    it('the log function should be called with "this should log"', (done) => {
+    it('the log function should be called with "this should log"', () => {
       result('this should log')
       expect(customLogger).to.be.calledWith('this should log')
-      done()
     })
   })
 })

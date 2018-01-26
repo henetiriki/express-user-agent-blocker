@@ -14,26 +14,22 @@ describe('isBlockUa', () => {
     let result: boolean
 
     describe('and the user agent is A', () => {
-      before((done) => {
+      before(() => {
         result = isBlockUa(regex, 'A')
-        done()
       })
 
-      it('expect the result to be "true"', (done) => {
+      it('expect the result to be "true"', () => {
         expect(result).to.equal(true)
-        done()
       })
     })
 
     describe('and the user agent is D', () => {
-      before((done) => {
+      before(() => {
         result = isBlockUa(regex, 'D')
-        done()
       })
 
-      it('expect the result to be "false"', (done) => {
+      it('expect the result to be "false"', () => {
         expect(result).to.equal(false)
-        done()
       })
     })
   })

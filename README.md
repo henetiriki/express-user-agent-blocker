@@ -98,6 +98,13 @@ npm test
 
 ## Changelog
 
+### v1.5.1
+
+- Adds testing support for Node 9
+- Updates dependencies
+- Removes `done()` callbacks in tests
+- Removes `bithound` dependency
+
 ### v1.5.0
 
 - Drops testing support for Node 6, but should continue to work as normal

@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+  - "9"
   - "8"
   - "7"
 install:
@@ -10,4 +11,3 @@ sudo: false
 
 after_script:
   - "cat ./coverage/lcov.info | coveralls"
-  - "bithound check git@github.com:ouq77/express-user-agent-blocker.git"

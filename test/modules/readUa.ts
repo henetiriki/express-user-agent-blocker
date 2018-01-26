@@ -14,34 +14,30 @@ describe('readUa', () => {
   let result: string
 
   describe('when the request contains a user agent header', () => {
-    before((done) => {
+    before(() => {
       req = new MockReq({
         headers: {
           'user-agent': ' A ',
         },
       })
       result = readUa(req)
-      done()
     })
 
-    it('expect the result to be "A"', (done) => {
+    it('expect the result to be "A"', () => {
       expect(result).to.exist()
       expect(result).to.equal('A')
-      done()
     })
   })
 
   describe('when the request doesn\'t contain a user agent header', () => {
-    before((done) => {
+    before(() => {
       req = new MockReq()
       result = readUa(req)
-      done()
     })
 
-    it('expect the result to be ""', (done) => {
+    it('expect the result to be ""', () => {
       expect(result).to.exist()
       expect(result).to.equal('')
-      done()
     })
   })
 })
