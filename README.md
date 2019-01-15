@@ -1,6 +1,6 @@
 # Express User-agent Blocker 🤖
 
-[![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker) [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker) [![Coverage Status](https://coveralls.io/repos/github/ouq77/express-user-agent-blocker/badge.svg?branch=master)](https://coveralls.io/github/ouq77/express-user-agent-blocker?branch=master) [![bitHound Code](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/code.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker) [![bitHound Dependencies](https://www.bithound.io/github/ouq77/express-user-agent-blocker/badges/dependencies.svg)](https://www.bithound.io/github/ouq77/express-user-agent-blocker/master/dependencies/npm)
+[![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker) [![Build Status](https://travis-ci.org/ouq77/express-user-agent-blocker.svg?branch=master)](https://travis-ci.org/ouq77/express-user-agent-blocker) [![Coverage Status](https://coveralls.io/repos/github/ouq77/express-user-agent-blocker/badge.svg?branch=master)](https://coveralls.io/github/ouq77/express-user-agent-blocker?branch=master)
 
 A lightweight user-agent blocker for Express.
 
@@ -97,6 +97,12 @@ npm test
 ```
 
 ## Changelog
+
+### v1.5.2
+
+- Adds testing support for Node 10 & 11
+- Removes references to bithound
+- Updates dependencies
 
 ### v1.5.1
 
