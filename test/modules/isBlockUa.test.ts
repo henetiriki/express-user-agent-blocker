@@ -1,7 +1,6 @@
-import {expect} from 'code'
+import { expect } from 'code'
 import * as Lab from 'lab'
-
-import {isBlockUa} from '../../src/modules'
+import { isBlockUa } from '../../src/modules'
 
 export const lab = Lab.script()
 const describe = lab.describe

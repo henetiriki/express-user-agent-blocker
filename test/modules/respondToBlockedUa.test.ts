@@ -2,9 +2,8 @@ import * as chai from 'chai'
 import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
-import {mockRes} from 'sinon-express-mock'
-
-import {respondToBlockedUa} from '../../src/modules/respondToBlockedUa'
+import { mockRes } from 'sinon-express-mock'
+import { respondToBlockedUa } from '../../src/modules'
 
 export const lab = Lab.script()
 const describe = lab.describe
@@ -29,7 +28,7 @@ describe('index', () => {
       it(`expect the response to contain message "${defaultMessage}"`, () => {
         respondToBlockedUa(res)
         expect(res.status).to.be.calledWith(200)
-        expect(res.json).to.be.calledWith({message: defaultMessage})
+        expect(res.json).to.be.calledWith({ message: defaultMessage })
         expect(next.notCalled)
       })
     })
@@ -37,7 +36,7 @@ describe('index', () => {
     describe('and options contain html', () => {
       const html = '<h1>Let me make a bologna sandwich...</h1>'
       it(`expect the html to be rendered with "${html}"`, () => {
-        respondToBlockedUa(res, {html})
+        respondToBlockedUa(res, { html })
         expect(res.status).to.be.calledWith(200)
         expect(res.send).to.be.calledWith(html)
         expect(next.notCalled)
@@ -47,7 +46,7 @@ describe('index', () => {
     describe('and options contain text', () => {
       const text = 'Words hold no weight'
       it(`expect the html to be rendered with "${text}"`, () => {
-        respondToBlockedUa(res, {text})
+        respondToBlockedUa(res, { text })
         expect(res.status).to.be.calledWith(200)
         expect(res.send).to.be.calledWith(text)
         expect(next.notCalled)

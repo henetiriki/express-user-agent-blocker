@@ -1,5 +1,5 @@
-import {Options} from '../index.d'
-import {getLogger} from './'
+import { Options } from '../definitions/options'
+import { getLogger } from './'
 
 /**
  * Builds the regex to test UAs against

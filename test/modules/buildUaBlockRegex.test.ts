@@ -1,7 +1,6 @@
-import {expect} from 'code'
+import { expect } from 'code'
 import * as Lab from 'lab'
-
-import {buildUaBlockRegex} from '../../src/modules'
+import { buildUaBlockRegex } from '../../src/modules'
 
 export const lab = Lab.script()
 const describe = lab.describe

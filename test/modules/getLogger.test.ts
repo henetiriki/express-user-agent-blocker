@@ -2,9 +2,8 @@ import * as chai from 'chai'
 import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
-
-import {Log} from '../../src/index.d'
-import {getLogger} from '../../src/modules'
+import { Log } from '../../src/definitions/log'
+import { getLogger } from '../../src/modules'
 
 export const lab = Lab.script()
 const describe = lab.describe
@@ -37,7 +36,7 @@ describe('getLogger', () => {
     }
     let result: any
     before(() => {
-      result = getLogger('euab:getLogger.test', {logger})
+      result = getLogger('euab:getLogger.test', { logger })
     })
 
     it('the log function should be called with "this should log"', () => {

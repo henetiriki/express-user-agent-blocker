@@ -1,4 +1,4 @@
-import {Request} from 'express'
+import { Request } from 'express'
 
 /**
  * Reads the user agent from the request
@@ -12,4 +12,4 @@ const readUa = (req: Request): string => {
   return ua.trim()
 }
 
-export {readUa}
+export { readUa }

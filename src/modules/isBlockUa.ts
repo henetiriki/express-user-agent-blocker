@@ -7,4 +7,4 @@
 const isBlockUa = (blockRegex: RegExp, userAgent: string): boolean =>
   blockRegex.test(userAgent.toLowerCase())
 
-export {isBlockUa}
+export { isBlockUa }

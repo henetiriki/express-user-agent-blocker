@@ -1,8 +1,7 @@
-import {expect} from 'code'
+import { expect } from 'code'
 import * as Lab from 'lab'
 import * as MockReq from 'mock-req'
-
-import {readUa} from '../../src/modules'
+import { readUa } from '../../src/modules'
 
 export const lab = Lab.script()
 const describe = lab.describe

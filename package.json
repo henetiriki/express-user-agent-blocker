@@ -24,7 +24,7 @@
     "sinon-chai": "3.3.0",
     "sinon-express-mock": "2.1.0",
     "tslint": "5.12.1",
-    "typescript": "3.2.2"
+    "typescript": "3.2.4"
   },
   "engines": {
     "node": ">=6",
@@ -36,7 +36,7 @@
     "user-agent"
   ],
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "lib/index.js",
   "name": "express-user-agent-blocker",
   "peerDependencies": {
     "express": ">= 4.5.0",
@@ -51,11 +51,11 @@
     "build:clean": "npm run clean",
     "build:lint": "npm run lint",
     "build:compile": "tsc -p tsconfig.json",
-    "build:copy": "ncp compiled/src/ dist/",
+    "build:copy": "ncp compiled/src/ lib/",
     "clean": "npm-run-all clean:*",
     "clean:compiled": "rimraf compiled/*",
     "clean:coverage": "rimraf coverage/*",
-    "clean:dist": "rimraf dist/*",
+    "clean:lib": "rimraf lib/*",
     "lint": "tslint 'src/**/*.ts' 'test/**.*.ts'",
     "prepare": "npm run test",
     "test": "npm-run-all build:* test:*",
@@ -63,5 +63,6 @@
     "test:coverage-html": "lab -c -S -v --coverage-exclude compiled/test -r html -o ./coverage/coverage.html ./compiled/test",
     "test:coverage-lcov": "lab -c -S -v --coverage-exclude compiled/test -r lcov -o ./coverage/lcov.info ./compiled/test"
   },
+  "types": "lib/index.d.ts",
   "version": "1.5.2"
 }

@@ -98,6 +98,10 @@ npm test
 
 ## Changelog
 
+### v2.0.0
+
+- Adds TypeScript types
+
 ### v1.5.2
 
 - Adds testing support for Node 10 & 11

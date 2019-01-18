@@ -1,7 +1,6 @@
-import {Response} from 'express'
-
-import {Options} from '../index.d'
-import {getLogger} from './'
+import { Response } from 'express'
+import { Options } from '../definitions/options'
+import { getLogger } from './'
 
 const defaultMessage = {
   message: 'Nothing to see here - move along please...',
@@ -12,7 +11,7 @@ const defaultMessage = {
  * @param {Response} res the response object
  * @param {Options} [options] will respond with a custom {@link Options#html} or {@link Options#text} message, if set
  */
-const respondToBlockedUa = (res: Response, options: Options = {html: '', text: ''}): void => {
+const respondToBlockedUa = (res: Response, options: Options = { html: '', text: '' }): void => {
   const log: any = getLogger('euab:respondToBlockedUa', options)
 
   if (options.html || options.text) {
@@ -25,4 +24,4 @@ const respondToBlockedUa = (res: Response, options: Options = {html: '', text: '
   res.status(200).json(defaultMessage)
 }
 
-export {respondToBlockedUa}
+export { respondToBlockedUa }
