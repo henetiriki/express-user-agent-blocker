@@ -64,5 +64,5 @@
     "test:coverage-lcov": "lab -c -S -v --coverage-exclude compiled/test -r lcov -o ./coverage/lcov.info ./compiled/test"
   },
   "types": "lib/index.d.ts",
-  "version": "1.5.2"
+  "version": "2.0.0"
 }
