@@ -115,6 +115,10 @@ npm test
 
 ## Changelog
 
+### v2.0.2
+
+- Fixes broken test
+
 ### v2.0.1
 
 - Adds Typescript usage documentation
