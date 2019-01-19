@@ -3,7 +3,7 @@ import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { mockReq, mockRes } from 'sinon-express-mock'
-import * as blocker from '../src/index'
+import blocker from '../src/index'
 
 export const lab = Lab.script()
 

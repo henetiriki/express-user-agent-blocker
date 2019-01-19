@@ -19,15 +19,32 @@ npm i express-user-agent-blocker
 This module has no dependencies and can be added anywhere in the `express` chain as long as it runs before serving any content that needs to be blocked.
 
 ```js
+// JavaScript
 const express = require('express')
-const userAgentBlocker = require('express-user-agent-blocker')
+const blocker = require('express-user-agent-blocker')
 
 const app = express()
 
 // ...
 // other middleware
 // ...
-app.use(userAgentBlocker(['Baiduspider', 'SomeHorridUA']))
+app.use(blocker(['Baiduspider', 'SomeHorridUA']))
+// ...
+// more middleware
+// ...
+```
+
+```typescript
+// TypeScript
+import express from 'express'
+import blocker from 'express-user-agent-blocker'
+
+const app = express()
+
+// ...
+// other middleware
+// ...
+app.use(blocker(['Baiduspider', 'SomeHorridUA']))
 // ...
 // more middleware
 // ...
@@ -37,12 +54,12 @@ app.use(userAgentBlocker(['Baiduspider', 'SomeHorridUA']))
                
 ```js
 // html response
-app.use(userAgentBlocker(['Baiduspider'], {
+app.use(blocker(['Baiduspider'], {
   html: '<h1>Let me make a bologna sandwich...</h1>'
 }))
 
 // plain text response
-app.use(userAgentBlocker(['Baiduspider'], {
+app.use(blocker(['Baiduspider'], {
   text: 'Words hold no weight'
 }))
 ```
@@ -78,7 +95,7 @@ DEBUG=euab:respondToBlockedUa node server.js
 Pass in a logger object with a `log` function to call
 ```js
 // console log
-app.use(userAgentBlocker(['Baiduspider'], {
+app.use(blocker(['Baiduspider'], {
   logger: {
     log: (message) => {
       console.log(message)
@@ -97,6 +114,10 @@ npm test
 ```
 
 ## Changelog
+
+### v2.0.1
+
+- Adds Typescript usage documentation
 
 ### v2.0.0
 
