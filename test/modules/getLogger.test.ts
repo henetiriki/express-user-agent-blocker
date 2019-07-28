@@ -1,5 +1,5 @@
+import * as Lab from '@hapi/lab'
 import * as chai from 'chai'
-import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { Log } from '../../src/definitions/log'
@@ -27,21 +27,40 @@ describe('getLogger', () => {
     })
   })
 
-  describe('when creating a default logger', () => {
-    const customLogger = sinon.spy()
-    const logger: Log = {
-      log: (message: string) => {
-        customLogger(message)
-      },
-    }
-    let result: any
-    before(() => {
-      result = getLogger('euab:getLogger.test', { logger })
+  describe('when creating a custom logger', () => {
+    describe('and the logger is a function', () => {
+      const customLogger = sinon.spy()
+      const logger: Log = {
+        log: (message: string) => {
+          customLogger(message)
+        },
+      }
+      let result: any
+      before(() => {
+        result = getLogger('euab:getLogger.test', { logger })
+      })
+
+      it('the log function should be called with "this should log"', () => {
+        result('this should log')
+        expect(customLogger).to.be.calledWith('this should log')
+      })
     })
 
-    it('the log function should be called with "this should log"', () => {
-      result('this should log')
-      expect(customLogger).to.be.calledWith('this should log')
+    describe('and the logger is not a function', () => {
+      const logger: Log = {
+        // @ts-ignore
+        log: 'I\'m not a logger',
+      }
+      let result: any
+      before(() => {
+        result = getLogger('euab:getLogger.test', { logger })
+        result.log = sinon.spy()
+      })
+
+      it('the log function should not be called because DEBUG is not set', () => {
+        result('will not log because DEBUG is not set')
+        expect(result.log.notCalled)
+      })
     })
   })
 })

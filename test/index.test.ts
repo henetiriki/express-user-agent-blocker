@@ -1,5 +1,5 @@
+import * as Lab from '@hapi/lab'
 import * as chai from 'chai'
-import * as Lab from 'lab'
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { mockReq, mockRes } from 'sinon-express-mock'

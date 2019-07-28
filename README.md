@@ -115,6 +115,10 @@ npm test
 
 ## Changelog
 
+### v2.0.3
+
+- Chore: updated test dependencies only - no functional changes
+
 ### v2.0.2
 
 - Fixes broken test

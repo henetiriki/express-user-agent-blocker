@@ -8,7 +8,6 @@ compiled
 npm-debug.log
 
 # config files
-.bithoundrc
 .editorconfig
 .jshintrc
 .travis.yml

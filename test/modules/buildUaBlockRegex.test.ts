@@ -1,5 +1,5 @@
-import { expect } from 'code'
-import * as Lab from 'lab'
+import { expect } from '@hapi/code'
+import * as Lab from '@hapi/lab'
 import { buildUaBlockRegex } from '../../src/modules'
 
 export const lab = Lab.script()
