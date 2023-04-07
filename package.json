@@ -4,7 +4,7 @@
     "name": "Louw Swart"
   },
   "bugs": {
-    "url": "https://github.com/ouq77/express-user-agent-blocker/issues"
+    "url": "https://github.com/henetiriki/express-user-agent-blocker/issues"
   },
   "dependencies": {},
   "description": "Express middleware for blocking access based on User Agent",
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ouq77/express-user-agent-blocker.git"
+    "url": "git@github.com:henetiriki/express-user-agent-blocker.git"
   },
   "scripts": {
     "build": "npm-run-all build:*",
