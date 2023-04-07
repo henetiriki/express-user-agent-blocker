@@ -11,7 +11,6 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "noImplicitReturns": true,
-    "noImplicitUseStrict": true,
     "noUnusedLocals": true,
     "outDir": "./compiled",
     "pretty": true,
