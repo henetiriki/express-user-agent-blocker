@@ -1,6 +1,7 @@
 # Express User-agent Blocker 🤖
 
 [![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker)
+
 A lightweight user-agent blocker for Express.
 
 ## Why?
