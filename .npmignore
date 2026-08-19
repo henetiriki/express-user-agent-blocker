@@ -10,7 +10,6 @@ npm-debug.log
 # config files
 .editorconfig
 .jshintrc
-.travis.yml
 ts*.json
 
 # ignore files
