@@ -1,6 +1,8 @@
 # Express User-agent Blocker 🤖
 
 [![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker)
+[![CI (Node 22, 24, 26)](https://github.com/henetiriki/express-user-agent-blocker/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/henetiriki/express-user-agent-blocker/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/henetiriki/express-user-agent-blocker/badge.svg)](https://coveralls.io/github/henetiriki/express-user-agent-blocker)
 
 A lightweight user-agent blocker for Express.
 
@@ -16,7 +18,7 @@ npm i express-user-agent-blocker
 
 ## Usage
 
-This module has no dependencies and can be added anywhere in the `express` chain as long as it runs before serving any content that needs to be blocked.
+This module has no direct runtime dependencies. It can be added anywhere in the `express` chain as long as it runs before serving any content that needs to be blocked.
 
 ```js
 // JavaScript
@@ -106,7 +108,7 @@ app.use(blocker(['Baiduspider'], {
 
 ## Tests
 
-Tested in node >= 7
+The supported Node.js versions are 22, 24, and 26. Continuous integration tests all three against Express 5; coverage from Node 24 is reported to [Coveralls](https://coveralls.io/github/henetiriki/express-user-agent-blocker). For local development, use Node 24 (`nvm use`).
 
 Run tests with:
 ```shell
