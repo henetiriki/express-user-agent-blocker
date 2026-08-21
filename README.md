@@ -117,6 +117,10 @@ npm test
 
 ## Changelog
 
+### v2.0.5
+
+- Republishes the package using the modernized TypeScript 7 build toolchain - no functional changes are intended
+
 ### v2.04
 
 - Chore: updated dev dependencies only - no functional changes
