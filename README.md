@@ -16,7 +16,7 @@ npm i express-user-agent-blocker
 
 ## Usage
 
-This module has no dependencies and can be added anywhere in the `express` chain as long as it runs before serving any content that needs to be blocked.
+This module has no direct runtime dependencies. It can be added anywhere in the `express` chain as long as it runs before serving any content that needs to be blocked.
 
 ```js
 // JavaScript
@@ -106,7 +106,7 @@ app.use(blocker(['Baiduspider'], {
 
 ## Tests
 
-Tested in node >= 7
+The supported Node.js versions are 22, 24, and 26. Continuous integration tests all three against Express 5; coverage from Node 24 is reported to [Coveralls](https://coveralls.io/github/henetiriki/express-user-agent-blocker). For local development, use Node 24 (`nvm use`).
 
 Run tests with:
 ```shell

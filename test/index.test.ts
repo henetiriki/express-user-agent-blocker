@@ -1,5 +1,6 @@
 import * as Lab from '@hapi/lab'
 import * as chai from 'chai'
+import express = require('express')
 import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { mockReq, mockRes } from 'sinon-express-mock'
@@ -94,6 +95,27 @@ describe('index', () => {
       blocker([])(req, res, next)
       expect(res.notCalled)
       expect(next.calledonce)
+    })
+  })
+
+  describe('when used by an Express 5 application', () => {
+    it('blocks a matching user agent', () => {
+      const app = express()
+      app.use(blocker(['Baiduspider']))
+      const request = mockReq({
+        headers: { 'user-agent': 'Baiduspider' },
+        method: 'GET',
+        url: '/',
+      })
+      const response = mockRes()
+      ;(response as any).setHeader = sinon.stub()
+
+      ;(app as any).handle(request, response)
+
+      return new Promise<void>((resolve) => setImmediate(resolve)).then(() => {
+        expect(response.status).to.be.calledWith(200)
+        expect(response.json).to.be.calledWith({ message: 'Nothing to see here - move along please...' })
+      })
     })
   })
 })
