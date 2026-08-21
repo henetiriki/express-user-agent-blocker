@@ -61,7 +61,7 @@
     "lint": "eslint --config eslint-config.mjs src test",
     "prepare": "npm run test",
     "test": "npm-run-all build:* test:*",
-    "test:run": "lab -c -S -v ./compiled/test",
+    "test:run": "lab -S -v ./compiled/test",
     "test:coverage-html": "lab -c -S -v --coverage-exclude compiled/test -r html -o ./coverage/coverage.html ./compiled/test",
     "test:coverage-lcov": "lab -c -S -v --coverage-exclude compiled/test -r lcov -o ./coverage/lcov.info ./compiled/test"
   },

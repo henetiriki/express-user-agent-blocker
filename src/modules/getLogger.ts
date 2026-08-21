@@ -1,4 +1,4 @@
-import debug from 'debug'
+import debug = require('debug')
 import type { IDebugger } from 'debug'
 import type { LogType } from '../definitions/log'
 import type { Options } from '../definitions/options'
