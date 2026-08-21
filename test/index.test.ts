@@ -2,7 +2,7 @@ import * as Lab from '@hapi/lab'
 import express = require('express')
 import * as sinon from 'sinon'
 import { mockReq, mockRes } from 'sinon-express-mock'
-import * as blocker from '../src/index'
+import blocker = require('../src/index')
 import { loadEsmModule } from './helpers/loadEsmModule'
 
 export const lab = Lab.script()

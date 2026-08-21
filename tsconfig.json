@@ -7,8 +7,8 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -23,6 +23,9 @@
     ]
   },
   "exclude": [
+    "compiled",
+    "coverage",
+    "lib",
     "node_modules",
     "dist"
   ]
