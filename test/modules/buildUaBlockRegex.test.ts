@@ -16,7 +16,7 @@ describe('buildUaBlockRegex', () => {
 
     it('expect a RegEx to be returned', () => {
       expect(result).to.exist()
-      expect(result).to.equal(new RegExp(`^.*(a|b|c).*$`))
+      expect(result).to.equal(new RegExp('^.*(a|b|c).*$'))
     })
   })
 
