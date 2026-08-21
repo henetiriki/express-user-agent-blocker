@@ -48,7 +48,7 @@ describe('getLogger', () => {
 
     describe('and the logger is not a function', () => {
       const logger: Log = {
-        // @ts-ignore
+        // @ts-expect-error verifies that invalid logger values are ignored
         log: 'I\'m not a logger',
       }
       let result: any

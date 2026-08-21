@@ -9,7 +9,7 @@ const before = lab.before
 
 describe('isBlockUa', () => {
   describe('when the regex is testing for a|b|c', () => {
-    const regex: RegExp = new RegExp(`^.*(a|b|c).*$`)
+    const regex: RegExp = new RegExp('^.*(a|b|c).*$')
     let result: boolean
 
     describe('and the user agent is A', () => {

@@ -8,12 +8,14 @@
   },
   "description": "Express middleware for blocking access based on User Agent",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@hapi/code": "9.0.3",
     "@hapi/lab": "26.0.1",
     "@types/debug": "4.1.13",
     "@types/express": "5.0.6",
     "chai": "^4.5.0",
     "debug": "4.4.3",
+    "eslint": "^10.8.1",
     "express": "5.2.1",
     "mock-req": "0.2.0",
     "ncp": "2.0.0",
@@ -22,8 +24,8 @@
     "sinon": "22.1.0",
     "sinon-chai": "3.7.0",
     "sinon-express-mock": "2.2.1",
-    "tslint": "6.1.3",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.67.0"
   },
   "engines": {
     "node": ">=22",
@@ -55,7 +57,7 @@
     "clean:compiled": "rimraf compiled/*",
     "clean:coverage": "rimraf coverage/*",
     "clean:lib": "rimraf lib/*",
-    "lint": "tslint 'src/**/*.ts' 'test/**.*.ts'",
+    "lint": "eslint --config eslint-config.mjs src test",
     "prepare": "npm run test",
     "test": "npm-run-all build:* test:*",
     "test:run": "lab -c -S -v ./compiled/test",
