@@ -1,6 +1,7 @@
 # Express User-agent Blocker 🤖
 
 [![npm](https://img.shields.io/npm/v/express-user-agent-blocker.svg)](https://www.npmjs.com/package/express-user-agent-blocker)
+[![CI (Node 22, 24, 26)](https://github.com/henetiriki/express-user-agent-blocker/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/henetiriki/express-user-agent-blocker/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/henetiriki/express-user-agent-blocker/badge.svg)](https://coveralls.io/github/henetiriki/express-user-agent-blocker)
 
 A lightweight user-agent blocker for Express.
