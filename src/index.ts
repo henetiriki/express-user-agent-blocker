@@ -1,5 +1,5 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express'
-import { Options } from './definitions/options'
+import type { NextFunction, Request, RequestHandler, Response } from 'express'
+import type { Options } from './definitions/options'
 import { buildUaBlockRegex, getLogger, isBlockUa, readUa, respondToBlockedUa } from './modules'
 
 /**

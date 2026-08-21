@@ -1,6 +1,6 @@
 import * as Lab from '@hapi/lab'
 import * as sinon from 'sinon'
-import { Log } from '../../src/definitions/log'
+import type { Log } from '../../src/definitions/log'
 import { getLogger } from '../../src/modules'
 import { loadEsmModule } from '../helpers/loadEsmModule'
 

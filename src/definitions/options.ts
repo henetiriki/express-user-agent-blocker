@@ -1,4 +1,4 @@
-import { Log } from './log'
+import type { Log } from './log'
 
 export interface Options {
   html?: string,

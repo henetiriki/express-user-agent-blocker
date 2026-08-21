@@ -1,4 +1,4 @@
-import { Options } from '../definitions/options'
+import type { Options } from '../definitions/options'
 import { getLogger } from './'
 
 /**
