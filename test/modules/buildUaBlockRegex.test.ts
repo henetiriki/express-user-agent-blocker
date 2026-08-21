@@ -9,7 +9,7 @@ const before = lab.before
 
 describe('buildUaBlockRegex', () => {
   describe('when passing in a valid Array', () => {
-    let result: RegExp
+    let result: RegExp | null
     before(() => {
       result = buildUaBlockRegex(['A', 'B', 'C'])
     })
@@ -21,7 +21,7 @@ describe('buildUaBlockRegex', () => {
   })
 
   describe('when passing in an empty Array', () => {
-    let result: RegExp
+    let result: RegExp | null
     before(() => {
       result = buildUaBlockRegex([])
     })

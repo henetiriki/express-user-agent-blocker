@@ -17,8 +17,15 @@ export default [
     files: typescriptFiles,
   })),
   {
+    files: ['src/**/*.ts'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'error',
+    },
+  },
+  {
     files: typescriptFiles,
     rules: {
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', fixStyle: 'separate-type-imports' }],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       'func-style': ['error', 'expression', { allowArrowFunctions: true }],

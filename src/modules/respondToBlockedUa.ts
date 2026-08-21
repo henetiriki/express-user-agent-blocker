@@ -1,5 +1,5 @@
-import { Response } from 'express'
-import { Options } from '../definitions/options'
+import type { Response } from 'express'
+import type { Options } from '../definitions/options'
 import { getLogger } from './'
 
 const defaultMessage = {

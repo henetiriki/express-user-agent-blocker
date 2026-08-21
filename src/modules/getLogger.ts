@@ -1,6 +1,7 @@
-import debug, { IDebugger } from 'debug'
-import { LogType } from '../definitions/log'
-import { Options } from '../definitions/options'
+import debug from 'debug'
+import type { IDebugger } from 'debug'
+import type { LogType } from '../definitions/log'
+import type { Options } from '../definitions/options'
 
 /**
  * Get a logger for a particular namespace, or return a custom log function

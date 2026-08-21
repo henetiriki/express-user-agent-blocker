@@ -1,6 +1,6 @@
 import { expect } from '@hapi/code'
 import * as Lab from '@hapi/lab'
-import * as MockReq from 'mock-req'
+import MockReq = require('mock-req')
 import { readUa } from '../../src/modules'
 
 export const lab = Lab.script()
