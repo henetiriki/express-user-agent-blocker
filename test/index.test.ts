@@ -1,19 +1,23 @@
 import * as Lab from '@hapi/lab'
-import * as chai from 'chai'
 import express = require('express')
 import * as sinon from 'sinon'
-import * as sinonChai from 'sinon-chai'
 import { mockReq, mockRes } from 'sinon-express-mock'
 import * as blocker from '../src/index'
+import { loadEsmModule } from './helpers/loadEsmModule'
 
 export const lab = Lab.script()
 
 const describe = lab.describe
 const it = lab.it
 const before = lab.before
-const expect = chai.expect
+let expect: any
 
-chai.use(sinonChai)
+before(async () => {
+  const chai = await loadEsmModule('chai')
+  const sinonChai = await loadEsmModule('sinon-chai')
+  chai.use(sinonChai.default)
+  expect = chai.expect
+})
 
 describe('index', () => {
   let req: mockReq
