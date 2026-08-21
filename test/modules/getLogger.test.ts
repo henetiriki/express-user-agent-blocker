@@ -1,17 +1,21 @@
 import * as Lab from '@hapi/lab'
-import * as chai from 'chai'
 import * as sinon from 'sinon'
-import * as sinonChai from 'sinon-chai'
 import { Log } from '../../src/definitions/log'
 import { getLogger } from '../../src/modules'
+import { loadEsmModule } from '../helpers/loadEsmModule'
 
 export const lab = Lab.script()
 const describe = lab.describe
 const it = lab.it
 const before = lab.before
-const expect = chai.expect
+let expect: any
 
-chai.use(sinonChai)
+before(async () => {
+  const chai = await loadEsmModule('chai')
+  const sinonChai = await loadEsmModule('sinon-chai')
+  chai.use(sinonChai.default)
+  expect = chai.expect
+})
 
 describe('getLogger', () => {
   describe('when creating a default logger', () => {
